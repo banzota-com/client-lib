@@ -62,7 +62,6 @@ export class FulfillmentAgencyService {
     }>;
   } & {
     timezone: PrismaJson_Timezone;
-    taxFeatureEnabled: boolean;
     platformFee: number;
     type: _36_Enums_FulfillmentAgencyType;
     costCalculationMethod: _36_Enums_CostCalculationMethod;
@@ -110,7 +109,6 @@ export class FulfillmentAgencyService {
     total: number;
     data: Array<{
       timezone: PrismaJson_Timezone;
-      taxFeatureEnabled: boolean;
       platformFee: number;
       type: _36_Enums_FulfillmentAgencyType;
       costCalculationMethod: _36_Enums_CostCalculationMethod;
@@ -233,7 +231,6 @@ export class FulfillmentAgencyService {
     }>;
   } & {
     timezone: PrismaJson_Timezone;
-    taxFeatureEnabled: boolean;
     platformFee: number;
     type: _36_Enums_FulfillmentAgencyType;
     costCalculationMethod: _36_Enums_CostCalculationMethod;
@@ -273,7 +270,6 @@ export class FulfillmentAgencyService {
     requestBody: UpdateFulfillmentAgencyDto,
   }): CancelablePromise<{
     timezone: PrismaJson_Timezone;
-    taxFeatureEnabled: boolean;
     platformFee: number;
     type: _36_Enums_FulfillmentAgencyType;
     costCalculationMethod: _36_Enums_CostCalculationMethod;
@@ -313,7 +309,6 @@ export class FulfillmentAgencyService {
     id: number,
   }): CancelablePromise<{
     timezone: PrismaJson_Timezone;
-    taxFeatureEnabled: boolean;
     platformFee: number;
     type: _36_Enums_FulfillmentAgencyType;
     costCalculationMethod: _36_Enums_CostCalculationMethod;
@@ -353,7 +348,6 @@ export class FulfillmentAgencyService {
     requestBody: UpdateFulfillmentAgencyStatusDto,
   }): CancelablePromise<{
     timezone: PrismaJson_Timezone;
-    taxFeatureEnabled: boolean;
     platformFee: number;
     type: _36_Enums_FulfillmentAgencyType;
     costCalculationMethod: _36_Enums_CostCalculationMethod;

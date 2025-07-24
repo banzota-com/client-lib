@@ -13,8 +13,8 @@ export type ThemePageWithDetails = {
   updatedAt: string;
   createdAt: string;
   id: number;
-  ThemePagesOnProducts: Array<{
-    productId: number;
+  Product: Array<{
+    id: number;
   }>;
 };
 
