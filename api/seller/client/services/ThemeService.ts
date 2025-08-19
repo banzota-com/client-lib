@@ -290,16 +290,10 @@ export class ThemeService {
     pageType: _36_Enums_ThemePageType,
     productId?: number,
   }): CancelablePromise<{
-    themePages: {
-      orderBy: string;
-      nextPageIndex: any;
-      prePageIndex: any;
-      total: number;
-      data: Array<{
-        name: string;
-        id: number;
-      }>;
-    };
+    themePages: Array<{
+      name: string;
+      id: number;
+    }>;
     activeTheme: {
       name: string;
       id: number;
