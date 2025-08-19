@@ -44,6 +44,7 @@ import { StatisticsService } from './services/StatisticsService';
 import { StoreService } from './services/StoreService';
 import { StoreTagService } from './services/StoreTagService';
 import { SubscriptionService } from './services/SubscriptionService';
+import { TaxService } from './services/TaxService';
 import { ThemeService } from './services/ThemeService';
 import { ThemeLibraryService } from './services/ThemeLibraryService';
 import { TiktokPixelService } from './services/TiktokPixelService';
@@ -94,6 +95,7 @@ export class ClientApi {
   public readonly store: StoreService;
   public readonly storeTag: StoreTagService;
   public readonly subscription: SubscriptionService;
+  public readonly tax: TaxService;
   public readonly theme: ThemeService;
   public readonly themeLibrary: ThemeLibraryService;
   public readonly tiktokPixel: TiktokPixelService;
@@ -155,6 +157,7 @@ export class ClientApi {
     this.store = new StoreService(this.request);
     this.storeTag = new StoreTagService(this.request);
     this.subscription = new SubscriptionService(this.request);
+    this.tax = new TaxService(this.request);
     this.theme = new ThemeService(this.request);
     this.themeLibrary = new ThemeLibraryService(this.request);
     this.tiktokPixel = new TiktokPixelService(this.request);

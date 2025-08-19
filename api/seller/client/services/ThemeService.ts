@@ -283,17 +283,17 @@ export class ThemeService {
    */
   public listActiveThemePages({
     storeId,
-    pageSize = 20,
-    nextPageIndex,
+    pageType,
+    productId,
   }: {
     storeId: string,
-    pageSize?: number,
-    nextPageIndex?: number,
+    pageType: _36_Enums_ThemePageType,
+    productId?: number,
   }): CancelablePromise<{
     themePages: {
       orderBy: string;
-      nextPageIndex: number;
-      prePageIndex: number;
+      nextPageIndex: any;
+      prePageIndex: any;
       total: number;
       data: Array<{
         name: string;
@@ -312,8 +312,8 @@ export class ThemeService {
         'storeId': storeId,
       },
       query: {
-        'pageSize': pageSize,
-        'nextPageIndex': nextPageIndex,
+        'pageType': pageType,
+        'productId': productId,
       },
       errors: {
         400: `Bad request`,
@@ -350,8 +350,8 @@ export class ThemeService {
       photos: PrismaJson_Photos;
       name: string;
       id: number;
-      ThemePage: Array<{
-        id: number;
+      ThemePagesOnProducts: Array<{
+        themePageId: number;
       }>;
     }>;
   }> {
@@ -387,8 +387,8 @@ export class ThemeService {
     storeId: string,
     id: number,
   }): CancelablePromise<({
-    Product: Array<{
-      id: number;
+    ThemePagesOnProducts: Array<{
+      productId: number;
     }>;
   } & {
     parentThemePageId: number;
@@ -445,7 +445,7 @@ export class ThemeService {
     });
   }
   /**
-   * @returns void
+   * @returns string Ok
    * @throws ApiError
    */
   public updateAssignedProductsForThemePage({
@@ -456,7 +456,7 @@ export class ThemeService {
     storeId: string,
     id: number,
     requestBody: UpdateAssignedProductsForThemePageDto,
-  }): CancelablePromise<void> {
+  }): CancelablePromise<string> {
     return this.httpRequest.request({
       method: 'PATCH',
       url: '/store/{storeId}/theme/theme-page/{id}/update-assigned-products',
