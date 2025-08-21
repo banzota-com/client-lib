@@ -23,8 +23,10 @@ export class PodTemplateService {
    * @throws ApiError
    */
   public createTemplate({
+    fulfillmentAgencyId,
     requestBody,
   }: {
+    fulfillmentAgencyId: number,
     requestBody: CreateTemplatePodDto,
   }): CancelablePromise<{
     isStock: boolean;
@@ -43,11 +45,15 @@ export class PodTemplateService {
     updatedAt: string;
     createdAt: string;
     isDeleted: boolean;
+    fulfillmentAgencyId: number;
     id: number;
   }> {
     return this.httpRequest.request({
       method: 'POST',
       url: '/pod/template',
+      query: {
+        'fulfillmentAgencyId': fulfillmentAgencyId,
+      },
       body: requestBody,
       mediaType: 'application/json',
       errors: {
@@ -143,6 +149,7 @@ export class PodTemplateService {
     updatedAt: string;
     createdAt: string;
     isDeleted: boolean;
+    fulfillmentAgencyId: number;
     id: number;
   } | boolean)> {
     return this.httpRequest.request({
@@ -210,8 +217,7 @@ export class PodTemplateService {
     }>;
     PodPrintArea: Array<{
       printAreaBounds: PrismaJson_PrintAreaBounds;
-      faPrice: number;
-      supplierCost: number;
+      printCost: number;
       photos: PrismaJson_PrintAreaPhotos;
       name: string;
       id: number;

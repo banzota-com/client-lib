@@ -310,8 +310,7 @@ export class PodDesignService {
     };
     printArea: Array<{
       printAreaBounds: PrismaJson_PrintAreaBounds;
-      faPrice: number;
-      supplierCost: number;
+      printCost: number;
       photos: PrismaJson_PrintAreaPhotos;
       name: string;
       id: number;

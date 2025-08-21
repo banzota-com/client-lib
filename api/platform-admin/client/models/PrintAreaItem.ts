@@ -11,8 +11,7 @@ export type PrintAreaItem = {
     'y': number;
     'x': number;
   }>;
-  faPrice: number;
-  supplierCost: number;
+  printCost: number;
   name: string;
 };
 

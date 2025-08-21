@@ -18,6 +18,9 @@ export type CreateTemplatePodDto = {
   sku?: string;
   isStock: boolean;
   isActive: boolean;
+  benefit?: number;
+  othersFee?: number;
+  serviceFee?: number;
   podPrintArea: Array<PrintAreaItem>;
   variantOption: Array<TemplateVariantOptionsPayLoad>;
   variants: Array<PodTemplateVariantData>;
