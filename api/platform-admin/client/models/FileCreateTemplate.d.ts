@@ -6,6 +6,10 @@ export type FileCreateTemplate = {
         name: string;
     }>;
     groupLayers?: Array<{
+        meshPoint?: Array<{
+            'y': number;
+            'x': number;
+        }>;
         height?: number;
         width?: number;
         left?: number;

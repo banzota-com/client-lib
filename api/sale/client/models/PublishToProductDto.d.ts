@@ -10,6 +10,9 @@ export type PublishToProductDto = {
     sizeGuide?: string;
     supplierContact?: string;
     sku?: string;
+    benefit?: number;
+    othersFee?: number;
+    serviceFee?: number;
     variantOption: Array<DesignVariantOptionsPayLoad>;
     variants: Array<DesignVariant>;
     files: Array<FileTemplate>;

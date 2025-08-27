@@ -14,4 +14,14 @@ export declare class UploadService {
         url: string;
         signedUrl: string;
     }>;
+    /**
+     * @returns any Ok
+     * @throws ApiError
+     */
+    createUploadPod({ requestBody, }: {
+        requestBody: CreateUploadDto;
+    }): CancelablePromise<{
+        url: string;
+        signedUrl: string;
+    }>;
 }

@@ -200,8 +200,7 @@ export declare class PodDesignService {
         };
         printArea: Array<{
             printAreaBounds: PrismaJson_PrintAreaBounds;
-            faPrice: number;
-            supplierCost: number;
+            printCost: number;
             photos: PrismaJson_PrintAreaPhotos;
             name: string;
             id: number;
@@ -211,10 +210,10 @@ export declare class PodDesignService {
                 groupLayers: PrismaJson_PodFileGroupLayers;
                 size: string;
                 backgroundUrl: string;
-                url: string;
                 fileName: string;
                 podDesignId: number;
                 podTemplateId: number;
+                url: string;
                 type: _36_Enums_FileType;
                 updatedAt: string;
                 createdAt: string;

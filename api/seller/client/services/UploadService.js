@@ -24,5 +24,24 @@ class UploadService {
             },
         });
     }
+    /**
+     * @returns any Ok
+     * @throws ApiError
+     */
+    createUploadPod({ requestBody, }) {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/upload/pod',
+            body: requestBody,
+            mediaType: 'application/json',
+            errors: {
+                400: `Bad request`,
+                401: `Invalid token`,
+                403: `Forbidden`,
+                404: `Not found`,
+                500: `Internal server error`,
+            },
+        });
+    }
 }
 exports.UploadService = UploadService;

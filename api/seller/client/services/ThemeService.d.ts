@@ -159,21 +159,15 @@ export declare class ThemeService {
      * @returns any Ok
      * @throws ApiError
      */
-    listActiveThemePages({ storeId, pageSize, nextPageIndex, }: {
+    listActiveThemePages({ storeId, pageType, productId, }: {
         storeId: string;
-        pageSize?: number;
-        nextPageIndex?: number;
+        pageType: _36_Enums_ThemePageType;
+        productId?: number;
     }): CancelablePromise<{
-        themePages: {
-            orderBy: string;
-            nextPageIndex: number;
-            prePageIndex: number;
-            total: number;
-            data: Array<{
-                name: string;
-                id: number;
-            }>;
-        };
+        themePages: Array<{
+            name: string;
+            id: number;
+        }>;
         activeTheme: {
             name: string;
             id: number;
@@ -199,8 +193,8 @@ export declare class ThemeService {
             photos: PrismaJson_Photos;
             name: string;
             id: number;
-            ThemePage: Array<{
-                id: number;
+            ThemePagesOnProducts: Array<{
+                themePageId: number;
             }>;
         }>;
     }>;
@@ -212,8 +206,8 @@ export declare class ThemeService {
         storeId: string;
         id: number;
     }): CancelablePromise<({
-        Product: Array<{
-            id: number;
+        ThemePagesOnProducts: Array<{
+            productId: number;
         }>;
     } & {
         parentThemePageId: number;
@@ -235,14 +229,14 @@ export declare class ThemeService {
         id: number;
     }): CancelablePromise<string>;
     /**
-     * @returns void
+     * @returns string Ok
      * @throws ApiError
      */
     updateAssignedProductsForThemePage({ storeId, id, requestBody, }: {
         storeId: string;
         id: number;
         requestBody: UpdateAssignedProductsForThemePageDto;
-    }): CancelablePromise<void>;
+    }): CancelablePromise<string>;
     /**
      * @returns ThemeWithDetails Ok
      * @throws ApiError

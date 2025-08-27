@@ -19,7 +19,8 @@ export declare class PodTemplateService {
      * @returns any Ok
      * @throws ApiError
      */
-    createTemplate({ requestBody, }: {
+    createTemplate({ fulfillmentAgencyId, requestBody, }: {
+        fulfillmentAgencyId: number;
         requestBody: CreateTemplatePodDto;
     }): CancelablePromise<{
         isStock: boolean;
@@ -38,6 +39,7 @@ export declare class PodTemplateService {
         updatedAt: string;
         createdAt: string;
         isDeleted: boolean;
+        fulfillmentAgencyId: number;
         id: number;
     }>;
     /**
@@ -64,8 +66,9 @@ export declare class PodTemplateService {
      * @returns any Ok
      * @throws ApiError
      */
-    updateTemplate({ id, requestBody, }: {
+    updateTemplate({ id, fulfillmentAgencyId, requestBody, }: {
         id: number;
+        fulfillmentAgencyId: number;
         requestBody: UpdatePodTemplateDto;
     }): CancelablePromise<({
         isStock: boolean;
@@ -84,6 +87,7 @@ export declare class PodTemplateService {
         updatedAt: string;
         createdAt: string;
         isDeleted: boolean;
+        fulfillmentAgencyId: number;
         id: number;
     } | boolean)>;
     /**
@@ -131,8 +135,7 @@ export declare class PodTemplateService {
         }>;
         PodPrintArea: Array<{
             printAreaBounds: PrismaJson_PrintAreaBounds;
-            faPrice: number;
-            supplierCost: number;
+            printCost: number;
             photos: PrismaJson_PrintAreaPhotos;
             name: string;
             id: number;

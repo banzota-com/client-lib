@@ -5,19 +5,20 @@ export type UpdatePodTemplateDto = {
     podTechniqueId?: number;
     description?: string;
     supplierContact?: string;
+    benefit?: number;
+    othersFee?: number;
+    serviceFee?: number;
     keyFeature?: string;
     sizeGuide?: string;
     isStock?: boolean;
     isActive?: boolean;
     variants?: Array<{
         isActive: boolean;
-        faPrice?: number;
-        supplierCost?: number;
+        supplierCost: number;
         podTemplateVariantId: number;
     }>;
     podPrintArea?: Array<{
-        faPrice: number;
-        supplierCost: number;
+        printCost: number;
         podPrintAreaId: number;
     }>;
 };

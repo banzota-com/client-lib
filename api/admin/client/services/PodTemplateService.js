@@ -10,10 +10,13 @@ class PodTemplateService {
      * @returns any Ok
      * @throws ApiError
      */
-    createTemplate({ requestBody, }) {
+    createTemplate({ fulfillmentAgencyId, requestBody, }) {
         return this.httpRequest.request({
             method: 'POST',
             url: '/pod/template',
+            query: {
+                'fulfillmentAgencyId': fulfillmentAgencyId,
+            },
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -59,12 +62,15 @@ class PodTemplateService {
      * @returns any Ok
      * @throws ApiError
      */
-    updateTemplate({ id, requestBody, }) {
+    updateTemplate({ id, fulfillmentAgencyId, requestBody, }) {
         return this.httpRequest.request({
             method: 'PATCH',
             url: '/pod/template/{id}',
             path: {
                 'id': id,
+            },
+            query: {
+                'fulfillmentAgencyId': fulfillmentAgencyId,
             },
             body: requestBody,
             mediaType: 'application/json',
