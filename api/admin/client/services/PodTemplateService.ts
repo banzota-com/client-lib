@@ -128,9 +128,11 @@ export class PodTemplateService {
    */
   public updateTemplate({
     id,
+    fulfillmentAgencyId,
     requestBody,
   }: {
     id: number,
+    fulfillmentAgencyId: number,
     requestBody: UpdatePodTemplateDto,
   }): CancelablePromise<({
     isStock: boolean;
@@ -157,6 +159,9 @@ export class PodTemplateService {
       url: '/pod/template/{id}',
       path: {
         'id': id,
+      },
+      query: {
+        'fulfillmentAgencyId': fulfillmentAgencyId,
       },
       body: requestBody,
       mediaType: 'application/json',
