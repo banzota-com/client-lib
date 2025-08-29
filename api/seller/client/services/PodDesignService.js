@@ -149,12 +149,15 @@ class PodDesignService {
      * @returns any Ok
      * @throws ApiError
      */
-    updateMyDesign({ id, requestBody, }) {
+    updateMyDesign({ id, storeId, requestBody, }) {
         return this.httpRequest.request({
             method: 'PATCH',
             url: '/pod/design/{id}',
             path: {
                 'id': id,
+            },
+            query: {
+                'storeId': storeId,
             },
             body: requestBody,
             mediaType: 'application/json',

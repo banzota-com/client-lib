@@ -8,6 +8,9 @@ export type UpdateDesignDto = {
     supplierContact?: string;
     keyFeature?: string;
     sku?: string;
+    benefit?: number;
+    othersFee?: number;
+    serviceFee?: number;
     variantOption: Array<VariantOptionsPayLoad>;
     files: Array<FileUpdateDesign>;
     variants: Array<UpdateDesignVariant>;

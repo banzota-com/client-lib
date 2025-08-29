@@ -231,8 +231,9 @@ export declare class PodDesignService {
      * @returns any Ok
      * @throws ApiError
      */
-    updateMyDesign({ id, requestBody, }: {
+    updateMyDesign({ id, storeId, requestBody, }: {
         id: number;
+        storeId: string;
         requestBody: UpdateDesignDto;
     }): CancelablePromise<{
         isDraft: boolean;
