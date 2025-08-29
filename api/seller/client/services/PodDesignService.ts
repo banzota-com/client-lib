@@ -358,9 +358,11 @@ export class PodDesignService {
    */
   public updateMyDesign({
     id,
+    storeId,
     requestBody,
   }: {
     id: number,
+    storeId: string,
     requestBody: UpdateDesignDto,
   }): CancelablePromise<{
     isDraft: boolean;
@@ -384,6 +386,9 @@ export class PodDesignService {
       url: '/pod/design/{id}',
       path: {
         'id': id,
+      },
+      query: {
+        'storeId': storeId,
       },
       body: requestBody,
       mediaType: 'application/json',
