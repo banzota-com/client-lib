@@ -189,6 +189,7 @@ export class PodDesignService {
     requestBody: PublishToProductDto,
   }): CancelablePromise<{
     snapshotAt: string;
+    podDesignId: number;
     podTemplateId: number;
     campaignId: string;
     isEnable: boolean;

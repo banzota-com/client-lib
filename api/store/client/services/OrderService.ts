@@ -468,6 +468,16 @@ export class OrderService {
     paymentType: _36_Enums_PaymentType,
     requestBody: CreateOrderDto,
   }): CancelablePromise<{
+    orderItems: Array<{
+      productVariantId: number;
+      price: number;
+      name: string;
+      quantity: number;
+      productPermalink: string;
+      productName: string;
+      productId: number;
+      image: string;
+    }>;
     shippingFee: number;
     discount: number;
     subTotal: number;
