@@ -338,6 +338,7 @@ export declare class BoostSalesService {
             }>;
         } & {
             snapshotAt: string;
+            podDesignId: number;
             podTemplateId: number;
             campaignId: string;
             isEnable: boolean;

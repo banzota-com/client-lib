@@ -145,6 +145,7 @@ export declare class CollectionService {
         requestBody: operatorCondition;
     }): CancelablePromise<Array<{
         snapshotAt: string;
+        podDesignId: number;
         podTemplateId: number;
         campaignId: string;
         isEnable: boolean;
