@@ -857,6 +857,13 @@ export class ProductService {
       id: number;
     }>;
     ProductVariant: Array<({
+      PodDesignVariant: {
+        defaultPrice: number;
+        minSellingPrice: number;
+        supplierCost: number;
+        price: number;
+        id: number;
+      };
       PlatformVariant: {
         cost: PrismaJson_PlatformCostInfo;
         price: number;
