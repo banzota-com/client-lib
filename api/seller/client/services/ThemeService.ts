@@ -12,6 +12,7 @@ import type { PrismaJson_ThemeNodes } from '../models/PrismaJson_ThemeNodes';
 import type { PrismaJson_ThemeSetting } from '../models/PrismaJson_ThemeSetting';
 import type { PrismaJson_ThemeStyle } from '../models/PrismaJson_ThemeStyle';
 import type { Theme } from '../models/Theme';
+import type { ThemePageWithDetails } from '../models/ThemePageWithDetails';
 import type { ThemeWithDetails } from '../models/ThemeWithDetails';
 import type { UpdateAssignedProductsForThemePageDto } from '../models/UpdateAssignedProductsForThemePageDto';
 import type { UpdateThemeDto } from '../models/UpdateThemeDto';
@@ -371,7 +372,7 @@ export class ThemeService {
     });
   }
   /**
-   * @returns any Ok
+   * @returns ThemePageWithDetails Ok
    * @throws ApiError
    */
   public getThemePage({
@@ -380,21 +381,7 @@ export class ThemeService {
   }: {
     storeId: string,
     id: number,
-  }): CancelablePromise<({
-    ThemePagesOnProducts: Array<{
-      productId: number;
-    }>;
-  } & {
-    parentThemePageId: number;
-    themeId: number;
-    themeLibraryId: number;
-    content: string;
-    type: _36_Enums_ThemePageType;
-    name: string;
-    updatedAt: string;
-    createdAt: string;
-    id: number;
-  })> {
+  }): CancelablePromise<ThemePageWithDetails> {
     return this.httpRequest.request({
       method: 'GET',
       url: '/store/{storeId}/theme/theme-page/{id}',

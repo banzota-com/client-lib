@@ -576,8 +576,8 @@ export type { TemplateVariantOptionsPayLoad } from './models/TemplateVariantOpti
 export type { TemplateVariantOptionValues } from './models/TemplateVariantOptionValues';
 export type { Theme } from './models/Theme';
 export type { ThemeLibrary } from './models/ThemeLibrary';
-export type { ThemePage } from './models/ThemePage';
 export type { ThemePageType } from './models/ThemePageType';
+export type { ThemePageWithDetails } from './models/ThemePageWithDetails';
 export type { ThemeWithDetails } from './models/ThemeWithDetails';
 export type { TiktokPixel } from './models/TiktokPixel';
 export { TimeEmailMarketingUnit } from './models/TimeEmailMarketingUnit';
