@@ -434,6 +434,7 @@ export type { PrismaJson_PingPongTransaction } from './models/PrismaJson_PingPon
 export type { PrismaJson_PingPongTrialCalculation } from './models/PrismaJson_PingPongTrialCalculation';
 export type { PrismaJson_PlacementBoostSaleType } from './models/PrismaJson_PlacementBoostSaleType';
 export type { PrismaJson_PlatformCostInfo } from './models/PrismaJson_PlatformCostInfo';
+export type { PrismaJson_PodPhotos } from './models/PrismaJson_PodPhotos';
 export type { PrismaJson_ProductDiscountItems } from './models/PrismaJson_ProductDiscountItems';
 export type { PrismaJson_ProductHistoryVariants } from './models/PrismaJson_ProductHistoryVariants';
 export type { PrismaJson_ProductRequirementItems } from './models/PrismaJson_ProductRequirementItems';
