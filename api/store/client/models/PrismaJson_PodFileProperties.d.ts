@@ -1,7 +1,7 @@
 import type { PodFilePropertiesLabel } from './PodFilePropertiesLabel';
 import type { PodFilePropertiesValue } from './PodFilePropertiesValue';
 export type PrismaJson_PodFileProperties = {
-    isSelected?: boolean;
+    order?: number;
     value: PodFilePropertiesValue;
     label: PodFilePropertiesLabel;
 };
