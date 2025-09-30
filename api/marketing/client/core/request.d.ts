@@ -18,7 +18,7 @@ type Resolver<T> = (options: ApiRequestOptions) => Promise<T>;
 export declare const resolve: <T>(options: ApiRequestOptions, resolver?: T | Resolver<T> | undefined) => Promise<T | undefined>;
 export declare const getHeaders: (config: OpenAPIConfig, options: ApiRequestOptions, formData?: FormData) => Promise<Record<string, string>>;
 export declare const getRequestBody: (options: ApiRequestOptions) => any;
-export declare const sendRequest: <T>(config: OpenAPIConfig, options: ApiRequestOptions, url: string, body: any, formData: FormData | undefined, headers: Record<string, string>, onCancel: OnCancel, axiosClient: AxiosInstance) => Promise<AxiosResponse<T, any>>;
+export declare const sendRequest: <T>(config: OpenAPIConfig, options: ApiRequestOptions, url: string, body: any, formData: FormData | undefined, headers: Record<string, string>, onCancel: OnCancel, axiosClient: AxiosInstance) => Promise<AxiosResponse<T, any, {}>>;
 export declare const getResponseHeader: (response: AxiosResponse<any>, responseHeader?: string) => string | undefined;
 export declare const getResponseBody: (response: AxiosResponse<any>) => any;
 export declare const catchErrorCodes: (options: ApiRequestOptions, result: ApiResult) => void;

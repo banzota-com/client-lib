@@ -15,6 +15,7 @@ import type { PrismaJson_DiscountBoostSale } from '../models/PrismaJson_Discount
 import type { PrismaJson_MarginInfo } from '../models/PrismaJson_MarginInfo';
 import type { PrismaJson_Photos } from '../models/PrismaJson_Photos';
 import type { PrismaJson_PlacementBoostSaleType } from '../models/PrismaJson_PlacementBoostSaleType';
+import type { PrismaJson_PodPhotos } from '../models/PrismaJson_PodPhotos';
 import type { PrismaJson_VariantOptions } from '../models/PrismaJson_VariantOptions';
 import type { PrismaJson_VariantOptionValues } from '../models/PrismaJson_VariantOptionValues';
 import type { UpdateCrossSellStatusDto } from '../models/UpdateCrossSellStatusDto';
@@ -347,6 +348,7 @@ export declare class BoostSalesService {
             variantOption: PrismaJson_VariantOptions;
             availableSet: PrismaJson_AvailableSet;
             SKU: string;
+            podPhotos: PrismaJson_PodPhotos;
             details: string;
             permalink: string;
             platformProductId: number;

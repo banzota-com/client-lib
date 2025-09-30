@@ -2,6 +2,7 @@ import type { CreateStoreTagDto } from '../models/CreateStoreTagDto';
 import type { PrismaJson_AvailableSet } from '../models/PrismaJson_AvailableSet';
 import type { PrismaJson_CustomVariantOptions } from '../models/PrismaJson_CustomVariantOptions';
 import type { PrismaJson_Photos } from '../models/PrismaJson_Photos';
+import type { PrismaJson_PodPhotos } from '../models/PrismaJson_PodPhotos';
 import type { PrismaJson_VariantOptions } from '../models/PrismaJson_VariantOptions';
 import type { Tag } from '../models/Tag';
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -74,6 +75,7 @@ export declare class StoreTagService {
         variantOption: PrismaJson_VariantOptions;
         availableSet: PrismaJson_AvailableSet;
         SKU: string;
+        podPhotos: PrismaJson_PodPhotos;
         details: string;
         permalink: string;
         platformProductId: number;
