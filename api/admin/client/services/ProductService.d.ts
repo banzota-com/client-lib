@@ -2,6 +2,7 @@ import type { _36_Enums_BoostSaleTriggerType } from '../models/_36_Enums_BoostSa
 import type { _36_Enums_BoostSaleType } from '../models/_36_Enums_BoostSaleType';
 import type { _36_Enums_CollectionStatus } from '../models/_36_Enums_CollectionStatus';
 import type { _36_Enums_CollectionType } from '../models/_36_Enums_CollectionType';
+import type { _36_Enums_FileType } from '../models/_36_Enums_FileType';
 import type { _36_Enums_MarketingType } from '../models/_36_Enums_MarketingType';
 import type { CreateProductDto } from '../models/CreateProductDto';
 import type { GetAllProductType } from '../models/GetAllProductType';
@@ -625,6 +626,7 @@ export declare class ProductService {
     }): CancelablePromise<({
         PodFile: Array<{
             properties: PrismaJson_PodFileProperties;
+            type: _36_Enums_FileType;
             id: number;
         }>;
         Campaign: ({
