@@ -12,6 +12,7 @@ import type { PrismaJson_CustomVariantOptions } from '../models/PrismaJson_Custo
 import type { PrismaJson_Photos } from '../models/PrismaJson_Photos';
 import type { PrismaJson_PodFileGroupLayers } from '../models/PrismaJson_PodFileGroupLayers';
 import type { PrismaJson_PodFileProperties } from '../models/PrismaJson_PodFileProperties';
+import type { PrismaJson_PodPhotos } from '../models/PrismaJson_PodPhotos';
 import type { PrismaJson_PrintAreaBounds } from '../models/PrismaJson_PrintAreaBounds';
 import type { PrismaJson_PrintAreaPhotos } from '../models/PrismaJson_PrintAreaPhotos';
 import type { PrismaJson_VariantOptions } from '../models/PrismaJson_VariantOptions';
@@ -198,6 +199,7 @@ export class PodDesignService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
@@ -322,6 +324,7 @@ export class PodDesignService {
         size: string;
         backgroundUrl: string;
         fileName: string;
+        productId: number;
         podDesignId: number;
         podTemplateId: number;
         url: string;

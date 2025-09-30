@@ -475,6 +475,7 @@ export type { PrismaJson_PlacementBoostSaleType } from './models/PrismaJson_Plac
 export type { PrismaJson_PlatformCostInfo } from './models/PrismaJson_PlatformCostInfo';
 export type { PrismaJson_PodFileGroupLayers } from './models/PrismaJson_PodFileGroupLayers';
 export type { PrismaJson_PodFileProperties } from './models/PrismaJson_PodFileProperties';
+export type { PrismaJson_PodPhotos } from './models/PrismaJson_PodPhotos';
 export type { PrismaJson_PrintAreaBounds } from './models/PrismaJson_PrintAreaBounds';
 export type { PrismaJson_PrintAreaPhotos } from './models/PrismaJson_PrintAreaPhotos';
 export type { PrismaJson_ProductDiscountItems } from './models/PrismaJson_ProductDiscountItems';

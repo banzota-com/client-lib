@@ -23,6 +23,7 @@ import type { PrismaJson_MarginInfo } from '../models/PrismaJson_MarginInfo';
 import type { PrismaJson_Photos } from '../models/PrismaJson_Photos';
 import type { PrismaJson_PlacementBoostSaleType } from '../models/PrismaJson_PlacementBoostSaleType';
 import type { PrismaJson_PlatformCostInfo } from '../models/PrismaJson_PlatformCostInfo';
+import type { PrismaJson_PodPhotos } from '../models/PrismaJson_PodPhotos';
 import type { PrismaJson_ProductDiscountItems } from '../models/PrismaJson_ProductDiscountItems';
 import type { PrismaJson_ProductHistoryVariants } from '../models/PrismaJson_ProductHistoryVariants';
 import type { PrismaJson_ProductRequirementItems } from '../models/PrismaJson_ProductRequirementItems';
@@ -58,6 +59,7 @@ export class ProductService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
@@ -227,6 +229,7 @@ export class ProductService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
@@ -282,6 +285,7 @@ export class ProductService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
@@ -781,6 +785,7 @@ export class ProductService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
@@ -1051,6 +1056,7 @@ export class ProductService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
@@ -1108,6 +1114,7 @@ export class ProductService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
@@ -1228,6 +1235,7 @@ export class ProductService {
     variantOption: PrismaJson_VariantOptions;
     availableSet: PrismaJson_AvailableSet;
     SKU: string;
+    podPhotos: PrismaJson_PodPhotos;
     details: string;
     permalink: string;
     platformProductId: number;
